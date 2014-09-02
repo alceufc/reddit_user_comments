@@ -6,11 +6,6 @@ import time
 
 import settings
 
-# HTTP configuration.
-# headers = { 'User-Agent': crawler_paths.userAgent}
-# commentsPerRequest = 100
-# maxRequests = 30
-
 requestUrlPattern = 'http://www.reddit.com/user/%s/comments.json'
 jsonFileNamePattern = '%s_page_%d_comments.json'
 
@@ -83,7 +78,7 @@ def downloadUserComments(userId, commentsPerRequest, apiAfter, apiCount, page):
     redditUrl = requestUrlPattern % userId    
     redditUrl += '?limit=%d' % commentsPerRequest
     if apiAfter != None:
-        redditUrl += '&afer=%s' % apiAfter
+        redditUrl += '&after=%s' % apiAfter
     if apiCount > 0:
         redditUrl += '&count=%d' % apiCount
 

@@ -2,8 +2,9 @@
     "http" : {
         "userAgent" : "PhD Experiment by alceufc",
         "commentsPerRequest" : "100",
-        "maxRequests" : "30"
+        "maxRequests" : "50"
         }, 
     "userCommentsCsvDataDir" : "../data/csv/",
-    "userCommentsJsonDataDir" : "../data/json/"
+    "userCommentsJsonDataDir" : "../data/json/",
+    "userListFile" : "../user_list.txt"
 }
