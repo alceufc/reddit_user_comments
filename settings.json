@@ -1,0 +1,9 @@
+{
+    "http" : {
+        "userAgent" : "PhD Experiment by alceufc",
+        "commentsPerRequest" : "100",
+        "maxRequests" : "30"
+        }, 
+    "userCommentsCsvDataDir" : "../data/csv/",
+    "userCommentsJsonDataDir" : "../data/json/"
+}
