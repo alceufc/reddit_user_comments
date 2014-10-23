@@ -109,6 +109,8 @@ def downloadUserComments(userId, commentsPerRequest, apiAfter, apiCount, page):
     return True 
 
 def get_user_comments(userId):
+    createDataDirs()
+
     settingsDict = settings.loadSettings()
     print 'Downloading comment data for user %s.' % userId
 
@@ -149,6 +151,20 @@ def downloadUserData(userId):
     commentDictList = get_user_comments(userId)
     if commentDictList is not None:
         generateCsvUserData(commentDictList, userId)
+
+
+def createDataDirs():
+    '''
+    Create directories to save data if they do not exist.
+    '''
+    settingsDict = settings.loadSettings()
+
+    if not os.path.exists(settingsDict['userCommentsCsvDataDir']):
+        os.makedirs(settingsDict['userCommentsCsvDataDir'])
+
+    if not os.path.exists(settingsDict['userCommentsJsonDataDir']):
+        os.makedirs(settingsDict['userCommentsJsonDataDir'])
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
