@@ -4,7 +4,9 @@
         "commentsPerRequest" : "100",
         "maxRequests" : "50"
         }, 
-    "userCommentsCsvDataDir" : "../data/csv/",
-    "userCommentsJsonDataDir" : "../data/json/",
+    "userCommentsCsvDataDir" : "../data/csv_user_comments/",
+    "userCommentsJsonDataDir" : "../data/json_user_comments/",
+    "subCommentersCsvDataDir" : "../data/csv_sub_commenters/",
+    "subCommentersJsonDataDir" : "../data/json_sub_commenters/",
     "userListFile" : "../user_list.txt"
 }
